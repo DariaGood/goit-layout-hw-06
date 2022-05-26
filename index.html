@@ -60,7 +60,53 @@
             <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" class="svg_close">
             <use href="./img/symbol-defs.svg#close"></use></svg>
           </button>
-        <form class="modal form"></form>
+        <form class="modal form">
+            <p id="contact-details-head" class="form_call">Оставьте свои данные, мы вам перезвоним</p>
+        <ul class="list_modal_form">
+        <li class="item_form">
+            <label for="name" class="label_form">
+                Имя
+            </label>
+           <input type="text" name="name" placeholder=" " class="input_form"/>
+           <svg width="12" height="12" class="icon_form">
+                <use href="./img/symbol-defs.svg#icon-name_form"></use>
+            </svg>
+        </li>
+        <li class="item_form">
+            <label for="tel" class="label_form">
+                Телефон
+            </label>
+            <input type="tel" name="tel" placeholder=" " class="input_form"/>
+                <svg width="13" height="13" class="icon_form">
+                    <use href="./img/symbol-defs.svg#icon-tel_form"></use>
+                </svg>  
+        </li> 
+         <li class="item_form">
+            <label for="email" class="label_form">
+                Почта
+            </label>
+            <input type="email" name="email" placeholder=" " class="input_form"/>
+                    <svg width="12" height="12" class="icon_form">
+                    <use href="./img/symbol-defs.svg#icon-mail_form"></use>
+                </svg>
+        </li>
+        <li class="item_form">
+            <label for="comment" class="label_form">
+                Комментарий
+            </label>
+            <textarea name="comment" placeholder="Введите текст" class="input_comment"></textarea>
+        </li>
+    </ul>
+         <div class="agreement">
+            <label for="agreement" class=""></label>
+            <input type="checkbox" name="agreement" placeholder=" " class="input_agreement"/>
+            <svg width="11" height="8" class="icon_form_agreement">
+                <use  href="./img/symbol-defs.svg#icon-agreement"></use>
+            </svg>
+            <p class="text_agreement">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p>
+        </div>
+            <button type="submit"></button>
+        </form>
         </div>
     </div>
         </div>  
