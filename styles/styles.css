@@ -364,11 +364,13 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 530px;
-    height: 580px;
+    width: 450px;
+    height: ;
     background-color: #FFFFFF;
     border-radius: 4px;
     transform: translate(-50%, -50%);
+
+    padding: 40px;
     
 }
 
@@ -389,6 +391,8 @@ body {
 
     width: 30px;
     height: 30px;
+
+
 }
 
 
@@ -398,8 +402,16 @@ body {
     align-items: center;  
     fill: #000000;
 
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
+.button_oc:hover .svg_close {
+    fill:#2196F3
+
+}
 
 
 /* Разметка модального окна всередине*/
@@ -408,7 +420,7 @@ body {
     display: block;
     margin: 0;
     text-align: center;
-    padding: 40px 0px 0px 0px;
+    padding-bottom: 28px;
 
     color: hsl(0, 0%, 13%);
     font-weight: 700;
@@ -423,10 +435,8 @@ body {
     flex-direction: column;
 
     margin: 0;
-    padding-top: 30px;
-    padding-left: auto;
-    padding-right: auto;
-    padding-bottom: 0px;
+    padding: 0px;
+
   
     list-style-type: none;
     
@@ -434,14 +444,14 @@ body {
 
 .item_form {
     position: relative;
-    padding-bottom: 28px;
+    margin-bottom: 28px;
 }
 
 .item_form:last-child {
-    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
-
+/* Список в форме */
 
 
 .label_form {
@@ -461,7 +471,8 @@ body {
 
 
 .input_form {
-    width: 448px;
+    
+    width: 370px;
     height: 40px;
     margin: 0px;
     padding: 0px 25px 0px 38px;
@@ -472,6 +483,12 @@ body {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.01em;
+
+    outline: 0;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -480,13 +497,18 @@ body {
 .icon_form {
     display: block;
     align-items: center;
-    color: #212121;
+
+    fill: #212121;
 
     position: absolute;
     width: 18px;
     height: 18px;
-    top: 14px;
+    top: 12px;
     left: 15px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -496,18 +518,15 @@ body {
     cursor: pointer;
 }
   
-.input_form:focus-within {
-    outline: 0;
+.input_form:focus-within {  
     border-color: #2196F3;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 4px;
+    
 }
 
 
 .input_comment {
-    max-width: 448px;
-    min-width: 448px;
+    max-width: 370px;
+    min-width: 370px;
     height: 120px;
 
     margin: 0px;
@@ -522,7 +541,12 @@ body {
     letter-spacing: 0.01em;
 
     resize: none;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .input_comment::placeholder {
     color: rgba(117, 117, 117, 0.5);
@@ -537,81 +561,133 @@ body {
     
 }
 
-.agreement {
+
+
+/* Согласие договор */
+
+
+.form_policy_group {
     display: flex;
     justify-content: center;
     align-items: center;
     
     box-sizing: border-box;
-    margin: 0px;
-    padding: 20px 40px 30px 40px;
+    padding: 20px 0px 30px 0px;
     
 
-    width: 423px;
-    height: 24px;
-   
-    position: relative;
-}
-
-
-
-.input_agreement {
-    width: 16px;
+    width: 370px;
     height: 15px;
-    margin: 0px;
-    
-    
-
-    color: #212121;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-
-    
-    top: 10px;
-    left: -10px;
-
-    position: absolute;
-
-    
+      
 }
 
 
 .text_agreement {
-    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    
+
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: #757575;
 
     margin: 0px;
+
 }
 
-
-.icon_form_agreement {
-    display: block;
-    color: #212121;
-
-    width: 11px;
-    height: 8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-   
+.input_agreement {
+    visibility: hidden;
 }
-   /* 
-.icon_agreement::before {
-    display: block;
 
-    position: absolute;
-    width: 16px;
+.custom_checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 5px;
+
+    width: 15px;
     height: 15px;
-    top: -30;
-    left: -20;
 
-    border-color: #212121;
+    outline: 2px solid #212121;
+    outline-offset: -2px;
+
+    border-radius: 2px;
+
+
+    transition-property: outline-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    position: relative;
+
 }
 
-*/
+
+.svg_form_agreement {
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    fill: #FFFFFF;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.input_agreement:checked  + .custom_checkbox .svg_form_agreement {
+    fill: #FFFFFF;
+}
+
+.input_agreement:checked + .custom_checkbox {
+    border-style: none;
+    background-color: #2196F3;
+    outline-color:#2196F3;
+   
+
+}
+
+.a_button_form {
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+
+    color: #2196F3;
+    
+}
+
+.a_button_form:visited {
+    color:#2196F3;
+}
+
+.button_submit {
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0px auto;
+    padding: 0px 2px;
+    
+
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+
+    
+}
+
+
 
 
 
@@ -1010,6 +1086,9 @@ body {
     padding: 0px 0px 60px 0px;
     margin-left: 0px;
     margin-right: auto;
+
+    
+
     
 }
 
@@ -1030,13 +1109,17 @@ body {
 
 .position_footer {
     display: flex;
+    position: relative;
+
+    position: relative;
+    
 }
 
 .adress_footer_list {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    padding: 60px 70px 0px 0px;
+    padding: 53px 70px 0px 0px;
     list-style-type: none;
     margin: 0;
 }
@@ -1094,7 +1177,14 @@ body {
     flex-direction: column;
     justify-content:flex-start;
     align-items:flex-start;
-    padding: 72px 0px 0px 0px;
+    padding: 0px;
+
+    position: absolute;
+    top: 65px;
+    left: 300px;
+    width: 206px;
+    height: 80px;
+  
 }
 
 
@@ -1153,11 +1243,128 @@ body {
 
 
 
+/* Форма "Подписка на рассылку" */
 
+.form_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    left: 560px;
 
-
+    width: 570px;
+    height: 86px;
+    padding: 0px;
+    margin: 0px;
 
     
+}
+
+.form_footer_position {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+ 
+
+    
+
+}
+
+.text_form_footer {
+    display: block;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
+    text-transform: uppercase;
+}
+
+.input_footer {
+    display: block;
+    padding: 0px 15px;
+
+    width: 358px;
+    height: 50px;
+    
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    outline-offset: -1px;
+    border-style: none;
+    border-radius: 4px;
+    background: #2F303A; 
+
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    
+
+    transition-property: outline;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vissually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    }
+
+.input_footer:focus-within{
+ 
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+    outline-offset: -1px;
+    
+}
+
+.button_submit_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    background-color: #2196F3;
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    position: absolute;
+    bottom: 0;
+    right: -110px;
+
+}
+
+.svg_form_footer {
+    fill: #FFFFFF;
+    margin-left: 10px;
+}
+
+
+
+
 
 
 
@@ -1364,43 +1571,7 @@ body {
     color: #FFFFFF;
 }
 
-/*
 
-.overlay_container {
-    width: 370px;
-    height: 294px;
-    position: relative;
-    overflow: hidden;
-    
-}
-
-
-.overlay_p {
-    display: block;
-    box-sizing: border-box;
-    padding: 63px 24px;
-    margin: 0px;
-    background-color: var(--blue);
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    width: 100%;
-    height: 100%;
-
-    transform: translateY(100%);
-
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-    
-}
-
-.projects_item:hover .overlay_p {
-    transform: translateX(0);
-}
-*/
 
 
 .overlay_container {
